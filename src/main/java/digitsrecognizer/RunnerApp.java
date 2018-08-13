@@ -21,10 +21,11 @@ public class RunnerApp {
             throw new IOException("File not found");
         }
 
-        List<String[]> listOfStringLists = readAllLines
+        List<Integer[]> listOfIntegerLists = readAllLines
                 .subList(1, readAllLines.size())
                 .stream()
                 .map(x->x.split(","))
+                .map(DigitRecoUtils::stringArrayToIntegerArray)
                 .collect(Collectors.toList());
     }
 
