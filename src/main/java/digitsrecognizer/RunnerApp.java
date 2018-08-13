@@ -22,7 +22,7 @@ public class RunnerApp {
         }
 
         List<String[]> listOfStringLists = readAllLines
-                .subList(0, readAllLines.size())
+                .subList(1, readAllLines.size())
                 .stream()
                 .map(x->x.split(","))
                 .collect(Collectors.toList());
