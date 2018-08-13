@@ -21,12 +21,12 @@ public class RunnerApp {
             throw new IOException("File not found");
         }
 
-        List<Integer[]> listOfIntegerLists = readAllLines
+        List<Record> listOfRecordObjects = readAllLines
                 .subList(1, readAllLines.size())
                 .stream()
-                .map(x->x.split(","))
+                .map(x -> x.split(","))
                 .map(DigitRecoUtils::stringArrayToIntegerArray)
+                .map(Record::new)
                 .collect(Collectors.toList());
     }
-
 }
