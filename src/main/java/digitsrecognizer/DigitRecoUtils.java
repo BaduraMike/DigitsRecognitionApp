@@ -9,4 +9,8 @@ public class DigitRecoUtils {
         }
         return integerArray;
     }
+
+    public static int distance(Integer[] a, Integer[] b){
+        return (int)Math.sqrt((a[0]-b[0])*(a[0]-b[0])+(a[1]-b[1])*(a[1]-b[1]));
+    }
 }
