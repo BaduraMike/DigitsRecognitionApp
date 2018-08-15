@@ -10,7 +10,13 @@ public class DigitRecoUtils {
         return integerArray;
     }
 
-    public static int distance(Integer[] a, Integer[] b){
-        return (int)Math.sqrt((a[0]-b[0])*(a[0]-b[0])+(a[1]-b[1])*(a[1]-b[1]));
+    public static int distance(Integer[] a, Integer[] b) {
+        double sum = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            sum += ((double) a[i] - (double) b[i])
+                    * ((double) a[i] - (double) b[i]);
+        }
+        return (int)Math.sqrt(sum);
     }
 }
