@@ -11,8 +11,16 @@ public class Record {
         this.pixels = new Integer[pixels.length - 1];
 
         for (int i = 0; i < this.pixels.length; i++) {
-                this.pixels[i] = pixels[i + 1];
+            this.pixels[i] = pixels[i + 1];
         }
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public Integer[] getPixels() {
+        return pixels;
     }
 
     @Override
